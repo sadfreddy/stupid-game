@@ -105,7 +105,7 @@ object GameLogic {
           .map(result =>
             curState.copy(
               secondPlayerHand = secondPlayerHand.copy(cards = secondPlayerHand.cards - result),
-              currentCards = (currentCards.toSet - cards).toList :+ cards.copy(responseCard = Some(result))
+              currentCards     = (currentCards.toSet - cards).toList :+ cards.copy(responseCard = Some(result))
             )
           ).getOrElse(curState)
       }
